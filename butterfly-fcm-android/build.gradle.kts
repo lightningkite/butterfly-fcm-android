@@ -68,7 +68,10 @@ dependencies {
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.2.0")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
+    api("androidx.appcompat:appcompat:1.2.0")
     api("com.google.firebase:firebase-messaging:20.2.4")
+    api("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    api("io.reactivex.rxjava2:rxandroid:2.1.1")
 }
 
 tasks.create("sourceJar", Jar::class) {
