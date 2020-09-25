@@ -34,8 +34,8 @@ apply(plugin = "com.lightningkite.khrysalis")
 configure<KhrysalisPluginExtension> {
     projectName = "ButterflyFCM"
     organizationName = "Lightning Kite"
-    overrideIosFolder = project.projectDir.resolve("../ios-fcm").toString()
-    overrideWebFolder = project.projectDir.resolve("../web-fcm").toString()
+    overrideIosFolder = project.projectDir.resolve("../../butterfly-fcm-ios").toString()
+    overrideWebFolder = project.projectDir.resolve("../../butterfly-fcm-web").toString()
 }
 
 group = "com.lightningkite.khrysalis"
