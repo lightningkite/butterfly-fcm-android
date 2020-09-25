@@ -1,3 +1,4 @@
+//! This file is Khrysalis compatible.
 package com.lightningkite.butterfly.fcm
 
 import com.lightningkite.butterfly.SwiftMustBeClass
