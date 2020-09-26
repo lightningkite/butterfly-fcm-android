@@ -38,7 +38,7 @@ configure<KhrysalisPluginExtension> {
     overrideWebFolder = project.projectDir.resolve("../../butterfly-fcm-web").toString()
 }
 
-group = "com.lightningkite.khrysalis"
+group = "com.lightningkite.butterfly"
 version = "0.1.1"
 
 repositories {
