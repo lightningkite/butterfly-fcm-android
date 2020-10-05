@@ -3,7 +3,6 @@ package com.lightningkite.butterfly.fcm
 
 import com.lightningkite.butterfly.SwiftMustBeClass
 import com.lightningkite.butterfly.observables.ObservableStack
-import com.lightningkite.butterfly.swiftMustBeClass
 
 @SwiftMustBeClass
 interface ForegroundNotificationHandler {
