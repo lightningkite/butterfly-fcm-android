@@ -8,12 +8,16 @@ import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
 import com.lightningkite.butterfly.net.HttpClient
 import com.lightningkite.butterfly.observables.StandardObservableProperty
+import com.lightningkite.butterfly.views.ViewString
 
 object Notifications {
     var notificationToken = StandardObservableProperty<String?>(null)
     @Deprecated("Use 'request' instead", ReplaceWith("this.request"))
     fun configure() = request()
-    fun request() {
+    fun hasPermission(onResult: (Boolean) -> Unit) {
+        onResult(true)
+    }
+    fun request(insistMessage: ViewString? = null, onResult: (Boolean)->Unit = {}) {
         if (Build.VERSION.SDK_INT >= 26) {
             (HttpClient.appContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager).createNotificationChannel(
                 NotificationChannel(HttpClient.appContext.getString(R.string.default_notification_channel_id), "Default", NotificationManager.IMPORTANCE_DEFAULT)
@@ -22,5 +26,6 @@ object Notifications {
         FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener {
             notificationToken.value = it.result?.token
         }
+        onResult(true)
     }
 }
