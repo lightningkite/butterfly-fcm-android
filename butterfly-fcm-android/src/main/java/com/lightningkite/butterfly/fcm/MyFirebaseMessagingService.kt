@@ -12,7 +12,7 @@ import com.lightningkite.butterfly.post
 import com.lightningkite.butterfly.views.EntryPoint
 import com.lightningkite.butterfly.views.ViewGenerator
 
-class MyFirebaseMessagingService : FirebaseMessagingService() {
+open class MyFirebaseMessagingService : FirebaseMessagingService() {
     companion object {
         var main: ViewGenerator? = null
         const val FROM_NOTIFICATION: String = "fromNotification"
