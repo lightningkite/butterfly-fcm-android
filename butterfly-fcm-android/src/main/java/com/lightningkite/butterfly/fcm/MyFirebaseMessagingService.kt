@@ -8,9 +8,8 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.lightningkite.butterfly.post
-import com.lightningkite.butterfly.views.EntryPoint
-import com.lightningkite.butterfly.views.ViewGenerator
+import com.lightningkite.rxkotlinproperty.viewgenerators.ViewGenerator
+import com.lightningkite.rxkotlinproperty.viewgenerators.post
 
 open class MyFirebaseMessagingService : FirebaseMessagingService() {
     companion object {

@@ -4,14 +4,13 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
-import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
 import com.lightningkite.butterfly.net.HttpClient
-import com.lightningkite.butterfly.observables.StandardObservableProperty
-import com.lightningkite.butterfly.views.ViewString
+import com.lightningkite.rxkotlinproperty.StandardProperty
+import com.lightningkite.rxkotlinproperty.viewgenerators.ViewString
 
 object Notifications {
-    var notificationToken = StandardObservableProperty<String?>(null)
+    var notificationToken = StandardProperty<String?>(null)
     @Deprecated("Use 'request' instead", ReplaceWith("this.request"))
     fun configure() = request()
     fun hasPermission(onResult: (Boolean) -> Unit) {
