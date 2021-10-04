@@ -7,7 +7,7 @@ import android.os.Build
 import com.google.firebase.iid.FirebaseInstanceId
 import com.lightningkite.butterfly.net.HttpClient
 import com.lightningkite.rxkotlinproperty.StandardProperty
-import com.lightningkite.rxkotlinproperty.viewgenerators.ViewString
+import com.lightningkite.rxkotlinproperty.android.resources.ViewString
 
 object Notifications {
     var notificationToken = StandardProperty<String?>(null)
