@@ -3,7 +3,6 @@ import java.util.Properties
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenLocal()
     }
 }
@@ -51,7 +50,6 @@ val deploymentPassword = (System.getenv("OSSRH_PASSWORD")?.takeUnless { it.isEmp
 val useDeployment = deploymentUser != null || deploymentPassword != null
 
 repositories {
-    jcenter()
     mavenCentral()
     maven("https://jitpack.io")
     google()
